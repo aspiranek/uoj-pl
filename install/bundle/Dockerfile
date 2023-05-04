@@ -6,7 +6,7 @@ WORKDIR /opt
 #Update apt and install git
 RUN apt-get update && apt-get install -y git
 #Clone the latest UOJ Community verison to local
-RUN git clone https://github.com/aspiranek/uoj-pl.git
+RUN git clone https://github.com/aspiranek/uoj-pl.git uoj
 #Install environment and set startup script
 RUN cd uoj/install/bundle && sh install.sh -p && echo "\
 #!/bin/sh\n\
